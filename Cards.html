@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Cards</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="card.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 border">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Card</h2>
+              <h3 class="card-subtitle mb-2">1</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 border">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="card-title">Card</h2>
+                <h3 class="card-subtitle mb-2">2</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 border">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="card-title">Card</h2>
+                <h3 class="card-subtitle mb-2">3</h3>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 border">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="card-title">Card</h2>
+                <h3 class="card-subtitle mb-2">4</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 border">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="card-title">Card</h2>
+                <h3 class="card-subtitle mb-2">5</h3>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="row py-5 text-center">
+        <button class="btn btn-primary" onclick="{selectCard()}">Buy</button>
+      </div>
+      <div class="row py-5">
+        <div class="col-md-4 border">
+          <h1 id="pick-card"></h1>
+          <h1>is Selected</h1>
+        </div>
+      </div>
+    </div>
+    <script>
+      let arr = [1, 2, 3, 4, 5];
+      function selectCard() {
+        return (document.getElementById("pick-card").innerHTML = Math.floor(
+          Math.random() * arr.length
+        ));
+      }
+    </script>
+  </body>
+</html>
