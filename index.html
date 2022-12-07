@@ -13,67 +13,73 @@
 
   <body>
     <div class="container">
+      
       <div class="row">
         <div class="col-md-3 border">
           <div class="card">
             <div class="card-body">
               <h2 class="card-title">Card</h2>
-              <h3 class="card-subtitle mb-2">1</h3>
+              <h2 class="card-subtitle">1</h2>
             </div>
           </div>
         </div>
         <div class="col-md-3 border">
-            <div class="card">
-              <div class="card-body">
-                <h2 class="card-title">Card</h2>
-                <h3 class="card-subtitle mb-2">2</h3>
-              </div>
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Card</h2>
+              <h2 class="card-subtitle">2</h2>
             </div>
           </div>
-          <div class="col-md-3 border">
-            <div class="card">
-              <div class="card-body">
-                <h2 class="card-title">Card</h2>
-                <h3 class="card-subtitle mb-2">3</h3>
-              </div>
+        </div>
+        <div class="col-md-3 border">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Card</h2>
+              <h2 class="card-subtitle">3</h2>
             </div>
           </div>
+        </div>
       </div>
       <div class="row">
         <div class="col-md-3 border">
-            <div class="card">
-              <div class="card-body">
-                <h2 class="card-title">Card</h2>
-                <h3 class="card-subtitle mb-2">4</h3>
-              </div>
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Card</h2>
+              <h2 class="card-subtitle">4</h2>
             </div>
           </div>
-          <div class="col-md-3 border">
-            <div class="card">
-              <div class="card-body">
-                <h2 class="card-title">Card</h2>
-                <h3 class="card-subtitle mb-2">5</h3>
-              </div>
+        </div>
+        <div class="col-md-3 border">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Card</h2>
+              <h2 class="card-subtitle">5</h2>
             </div>
           </div>
+        </div>
       </div>
       <div class="row py-5 text-center">
-        <button class="btn btn-primary" onclick="{selectCard()}">Buy</button>
+        <button class="btn btn-primary" onclick="document.getElementById('pick-card').innerHTML = selectCard()">Buy</button>
       </div>
       <div class="row py-5">
-        <div class="col-md-4 border">
-          <h1 id="pick-card"></h1>
-          <h1>is Selected</h1>
+        <div class="col-md-3 border">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Card</h2>
+              <h2 id="pick-card"> </h2>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <script>
-      let arr = [1, 2, 3, 4, 5];
-      function selectCard() {
-        return (document.getElementById("pick-card").innerHTML = Math.floor(
-          Math.random() * arr.length
-        ));
+      const set = [1,2,3,4,5];
+       function selectCard(){
+
+         let pick=Math.floor(Math.random() * set.length);
+          return set[pick] ;
       }
+     
     </script>
   </body>
 </html>
